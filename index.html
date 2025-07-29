@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Trends in India</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background-image: url('https://images.pexels.com/photos/176851/pexels-photo-176851.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+      padding: 20px;
+      color: beige;
+      font-size: 25px;
+    }
+    ul {
+        list-style: none;
+        font-size: 30px;
+        padding:0;
+    }
+    .topic {
+      display: none;
+      margin-top: 30px;
+    }
+    img {
+      width: 500px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>AI Trends in India</h1>
+  <div id="introduction" class="topic">
+  <p>Artifical intelligent changing future of india from smart classrooms to modern hospital and high-tech farms</p>
+  <ul>
+    <li><b>AI in Education</b></li>
+    <li><b>AI in Healthcare</b></li>
+    <li><b>AI in Agriculture</b></li>
+  </ul>
+</div>
+
+
+  <div id="education" class="topic">
+<div id="education" class="topic">
+    <h2> AI in Education</h2>    
+    <p>AI helps student in clearing their doubts at anytime without any problem.Also, AI can helps to make quizes and notes for students which help them to learn easily </p>
+    <img src="https://m.foolcdn.com/media/dubs/images/ai-in-education-infographic.width-880.png" alt="AI in Education">
+  </div>
+
+  <div id="healthcare" class="topic">
+    <h2> AI in Healthcare</h2>
+    <p>AI helps doctors understand X-rays and MRIs quickly. It helps doctors to detect diseases fastly and help the patient to get rid from the diseases.</p>
+    <iframe width="500" height="300" src="https://www.youtube.com/embed/Nce3j-AmTqU?si=wsKtJkTjsMh1mmIZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen"allowfullscreen></iframe>
+  </div>
+
+  <div id="agriculture" class="topic">
+    <h2> AI in Agriculture</h2>
+    <p>AI tells farmers where fertilizer is needed means which part of crop is need to fertilize.It also helps farmers in forcasting weather . This saves time and money.</p>
+    <img src="https://timestech.in/wp-content/uploads/2025/03/Untitled-design-2025-03-05T134044.229.jpg" alt="AI in Agriculture">
+  </div>
+
+  
+  <button onclick="showNext()" style="padding: 10px 20px; margin-top: 20px;">Next</button>
+
+  <script>
+    
+    const topics = ['introduction','education', 'healthcare', 'agriculture'];
+    let current = 0;
+
+    function showNext() {
+      
+      for (let i = 0; i < topics.length; i++) {
+        document.getElementById(topics[i]).style.display = 'none';
+      }
+
+
+      document.getElementById(topics[current]).style.display = 'block';
+
+      
+      current = (current + 1) % topics.length;
+    }
+
+     showNext();
+  </script>
+
+</body>
+</html>
